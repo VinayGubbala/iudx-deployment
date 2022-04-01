@@ -1,1 +1,13 @@
+version: '3.9'
 
+services:
+  rabbitmq:
+    deploy:
+      resources:
+        limits:
+          pids: 4000
+          cpus: '2'
+          memory: 2048M
+        reservations:
+          cpus: '0.5'   
+          memory: 1024M
